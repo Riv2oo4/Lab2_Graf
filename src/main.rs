@@ -22,7 +22,6 @@ fn main() {
         panic!("{}", e);
     });
 
-    // Funciones para crear patrones
     fn set_glider(state: &mut Vec<Vec<bool>>, x: isize, y: isize) {
         let coords = [(x, y), (x + 1, y + 1), (x + 1, y + 2), (x, y + 2), (x - 1, y + 2)];
         for &(ix, iy) in &coords {
@@ -75,7 +74,7 @@ fn main() {
     let mut spaceship_x: isize = 0;
     let spaceship_y: isize = framebuffer_height as isize / 2;
     let mut spaceship_active = true;
-    
+
     set_glider(&mut state, 10, 10);
     set_lwss(&mut state, 20, 20);
     set_block(&mut state, 30, 30);
