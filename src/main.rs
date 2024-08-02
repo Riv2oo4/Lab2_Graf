@@ -7,12 +7,9 @@ use framebuffer::Framebuffer;
 fn main() {
     let window_width = 800;
     let window_height = 800;
-
     let framebuffer_width = 100;
     let framebuffer_height = 100;
-
     let mut framebuffer = Framebuffer::new(framebuffer_width, framebuffer_height);
-
     let mut window = Window::new(
         "Conway's Game of Life",
         window_width,
@@ -58,7 +55,7 @@ fn main() {
         }
     }
 
-    fn draw_spaceship(state: &mut Vec<Vec<bool>>, x: isize, y: isize) {
+    fn dibujar_nave(state: &mut Vec<Vec<bool>>, x: isize, y: isize) {
         let coords = [
             (x, y), (x + 1, y + 1), (x + 1, y + 2), (x, y + 2), (x - 1, y + 2),
             (x + 2, y), (x + 2, y + 1), (x + 2, y + 2),
@@ -85,7 +82,7 @@ fn main() {
 
         if spaceship_active {
             if spaceship_x < framebuffer_width as isize {
-                draw_spaceship(&mut state, spaceship_x, spaceship_y);
+                dibujar_nave(&mut state, spaceship_x, spaceship_y);
                 spaceship_x += 1;
             } else {
                 spaceship_active = false;
