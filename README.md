@@ -1,3 +1,3 @@
 # Conway's Game of Life
 
-![Lab2_Graf](https://github.com/user-attachments/assets/46eb8caf-da25-48e7-a0b4-9dff78f53238)
+![Conway's Game of Life](https://github.com/user-attachments/assets/379469ee-599d-45c3-a7a1-6eada90fd5e9)
